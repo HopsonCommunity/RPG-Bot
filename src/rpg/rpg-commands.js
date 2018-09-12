@@ -17,6 +17,6 @@ module.exports = class RPGCommandHandler extends CommandHandlerBase {
      * On the tin
      */
     setUpCommands() {
-        super.addBasicCommand("kill", "try to kill something", "test test");
+        
     }
 }
