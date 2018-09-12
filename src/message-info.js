@@ -17,7 +17,13 @@ module.exports = class MessageInfo {
                             .split(' ')
                             .map((s) => {
                                 return s.toLowerCase()
-                            });;
+                            });
+        //temp solution
+        this.sucess = true;
+        if (content.length < 2) {
+            this.sucess = false;
+            return;
+        }
         this.commandType    = content[0];
         this.command        = content[1];
         this.args           = content.slice(2);
