@@ -10,9 +10,10 @@ module.exports = class MessageInfo {
                             .map((s) => {
                                 return s.toLowerCase()
                             });;
-        this.command = content[0];
-        this.args    = content.slice(1);
-        this.channel = message.channel;
-        this.msg     = message;
+        this.commandType    = content[0];
+        this.command        = content[1];
+        this.args           = content.slice(2);
+        this.channel        = message.channel;
+        this.msg            = message;
     }
 }
