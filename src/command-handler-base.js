@@ -5,7 +5,6 @@ class Command {
         this.description = desc;
         this.example = ex;
         this.action = action;
-        console.log(`Command added.\nDescription:${this.description}\nEx: ${this.example}\nAction: ${this.action}`);
     }
 }
 
