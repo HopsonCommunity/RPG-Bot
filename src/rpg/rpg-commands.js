@@ -8,6 +8,6 @@ module.exports = class RPGCommandHandler extends CommandHandlerBase {
     }
 
     setUpCommands() {
-        super.addCommand("kill", "this command means you kill things or something");
+        super.addBasicCommand("kill", "try to kill something", "test test");
     }
 }
