@@ -4,9 +4,14 @@ module.exports = class MessageInfo {
         if (!this.isCommand) {
             return;
         }
-        const content = message.content.slice(1).split(' ');
-        this.command = content[0].toLowerCase();
-        this.args    = content.slice(0);
+        const content = message.content
+                            .slice(1)
+                            .split(' ')
+                            .map((s) => {
+                                return s.toLowerCase()
+                            });;
+        this.command = content[0];
+        this.args    = content.slice(1);
         this.channel = message.channel;
         this.msg     = message;
     }
