@@ -1,4 +1,12 @@
+
+/**
+ * A "struct" to hold message information
+ */
 module.exports = class MessageInfo {
+    /**
+     * Construct message info struct
+     * @param {Discord TextMessage} message Raw message sent by user
+     */
     constructor (message) {
         this.isCommand = message.content[0] === '-';
         if (!this.isCommand) {
