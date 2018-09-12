@@ -9,7 +9,7 @@ module.exports = class MessageEventHandler {
     handle (message) {
         const msgInfo = new MessageInfo(message);
         if (msgInfo.isCommand) {
-
+            msgInfo.channel.send(msgInfo.args);
         }
     }
 }
