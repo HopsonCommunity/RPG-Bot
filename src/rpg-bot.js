@@ -24,7 +24,7 @@ module.exports = class RPGBot {
         });
 
         this.client.on('message', msg => {
-            this.messageEventHandler.handle(msg);
+            this.messageEventHandler.handle(msg, client);
         });
     }
 }

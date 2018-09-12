@@ -17,9 +17,10 @@ module.exports = class MessageEventHandler {
     /**
      * Entry point for handling messages
      * @param {Discord.TextMessage} message The raw message sent by a user
+     * @param {Discord client} client The Discord client the message was sent 
      */
-    handle (message) {
-        const msgInfo = new MessageInfo(message);
+    handle (message, client) {
+        const msgInfo = new MessageInfo(message, client);
         if (msgInfo.isCommand) {
             this.handleCommand(msgInfo);
         }
