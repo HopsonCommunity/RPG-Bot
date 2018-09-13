@@ -6,8 +6,9 @@ module.exports = class MessageInfo {
     /**
      * Construct message info struct
      * @param {Discord TextMessage} message Raw message sent by user
+     * @param {Discord client} client The Discord client the message was sent 
      */
-    constructor (message) {
+    constructor (message, client) {
         this.isCommand = message.content[0] === '-';
         if (!this.isCommand) {
             return;
