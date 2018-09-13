@@ -23,6 +23,7 @@ module.exports = class MessageEventHandler {
         const msgInfo = new MessageInfo(message, client);
         if (msgInfo.isCommand) {
             this.handleCommand(msgInfo);
+
         }
     }
 
