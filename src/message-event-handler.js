@@ -20,8 +20,10 @@ module.exports = class MessageEventHandler {
      */
     handle (message) {
         const msgInfo = new MessageInfo(message);
-        if (msgInfo.isCommand) {
-            this.handleCommand(msgInfo);
+        if (msgInfo.sucess) {
+            if (msgInfo.isCommand) {
+                this.handleCommand(msgInfo);
+            }
         }
     }
 
